@@ -1,0 +1,86 @@
+html,
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: rgba(var(--neutral), 1);
+}
+
+app-root {
+    @apply flex flex-col w-screen h-screen max-w-full overflow-x-hidden;
+}
+
+ng-host {
+    display: none !important;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: rgba(var(--secondary), 1) #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--secondary), 1);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+h1 {
+    @apply font-black leading-tight text-3xl;
+    @screen sm {
+        font-size: 56px;
+    }
+}
+
+h2 {
+    @apply text-2xl font-black leading-tight;
+    @screen sm {
+        @apply text-5xl;
+    }
+}
+
+h3 {
+    font-size: 40px;
+    @apply font-black leading-tight;
+}
+
+h4 {
+    @apply font-black leading-tight text-xl;
+    @screen sm {
+        font-size: 32px;
+    }
+}
+
+h5 {
+    @apply text-2xl font-black leading-tight;
+}
+
+h6 {
+    @apply text-base font-black leading-tight;
+    @screen sm {
+        @apply text-xl;
+    }
+}
+
+p {
+    @apply text-sm;
+    @screen sm {
+        @apply text-base;
+    }
+}
+.container {
+    margin: 0 auto;
+}
