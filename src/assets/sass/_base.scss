@@ -2,14 +2,14 @@ html,
 body {
     min-width: 100vw;
     min-height: 100vh;
-    background: rgba(255, 255, 255, 1);
+    background: #FCFDFB;
     font-family: "Inter", sans-serif;
     font-weight: 500;
     color: rgba(var(--neutral), 1);
 }
 
 app-root {
-    @apply flex flex-col w-screen h-screen max-w-full overflow-x-hidden;
+     @apply flex flex-col w-screen min-h-screen max-w-full overflow-x-hidden;
 }
 
 ng-host {
@@ -32,11 +32,11 @@ ng-host {
     background: #ffffff;
 }
 
-*::-webkit-scrollbar-thumb {
-    background-color: rgba(var(--secondary), 1);
-    border-radius: 10px;
-    border: 2px solid #ffffff;
-}
+// *::-webkit-scrollbar-thumb {
+//     background-color: rgba(var(--secondary), 1);
+//     border-radius: 10px;
+//     border: 2px solid #ffffff;
+// }
 
 h1 {
     @apply font-black leading-tight text-3xl;

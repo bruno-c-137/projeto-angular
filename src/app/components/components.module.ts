@@ -1,19 +1,24 @@
 import { NgModule } from "@angular/core";
 import { HeaderComponent } from "./header/header.component";
 import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
+import { NavComponent } from "./nav-menu/nav.component";
+import { ContainerComponent } from "./container/container.component";
 
 @NgModule({
     declarations: [
-        HeaderComponent
+        HeaderComponent,
+        NavComponent,
+        ContainerComponent
     ],
     exports: [
-        HeaderComponent
+        HeaderComponent,
+        NavComponent,
+        ContainerComponent
     ],
     imports: [
         CommonModule,
-        RouterModule,
-        
+
+
     ]
 })
 export class ComponentsModule { }

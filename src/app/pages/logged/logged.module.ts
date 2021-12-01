@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { CommonModule } from '@angular/common';
 import { LoggedRoutingModule } from './logged-routing.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 
 
@@ -11,14 +12,13 @@ import { LoggedRoutingModule } from './logged-routing.module';
 @NgModule({
   declarations: [
     LoggedComponent,
-    DashboardComponent
-
+    DashboardComponent,
+    
   ],
   imports: [
     CommonModule,
     LoggedRoutingModule,
-
-
+    ComponentsModule
   ]
 
 

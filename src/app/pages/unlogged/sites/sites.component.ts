@@ -4,5 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './sites.component.html',
   styleUrls: ['./sites.component.scss']
 })
-export class SitesComponent {
-}
+export class SitesComponent { }
