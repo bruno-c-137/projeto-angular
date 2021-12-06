@@ -1,47 +1,68 @@
 .bg-content {
-  background: #484848;
-  border-radius: 10px;
-  @screen md{
-    border-radius: 0;
-  }
+    background: #484848;
+    border-radius: 10px;
+    @screen md {
+        border-radius: 0;
+    }
 }
+
 .hamburguer {
-  width: 40px;
-  border-top: 4px solid;
-  display: block;
-  color: rgba(19, 81, 180, 1);
+    width: 40px;
+    border-top: 4px solid;
+    display: block;
+    color: rgba(19, 81, 180, 1);
 }
 
 .hamburguer::after,
 .hamburguer::before {
-  border: 1.9px solid;
-  width: 40px;
-  background: currentColor;
-  content: "";
-  display: block;
-  margin-top: 5px;
-  transition: 0.3s;
-  position: relative;
-}
-
-.ativado {
-  .hamburguer {
-    border-top-color: transparent;
-  }
-
-
-}
-
-.ativado {
-  .hamburguer::before {
-    transform: rotate(135deg);
-  }
-}
-
-.ativado {
-  .hamburguer::after {
-    transform: rotate(-135deg);
-    top: -8px;
+    border: 1.9px solid;
+    width: 40px;
+    background: currentColor;
+    content: "";
+    display: block;
     margin-top: 5px;
-  }
+    transition: 0.3s;
+    position: relative;
+}
+
+.ativado {
+    .hamburguer {
+        border-top-color: transparent;
+    }
+}
+
+.ativado {
+    .hamburguer::before {
+        transform: rotate(135deg);
+    }
+}
+
+.ativado {
+    .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -8px;
+        margin-top: 5px;
+    }
+}
+
+.teste:hover {
+    // box-sizing: border-box;
+    //opacity: 5;
+    // background-color: rgba(48, 48, 48, 1);
+    background-color: rgba(0, 0, 0, .05);
+    border-left: 1px solid white;
+    transition: 0.3s;
+}
+
+.teste__1:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.rico {
+    border-top: 2px solid rgb(149, 159, 163);
+    transition: ease;
+    transition-duration: .5s;
+    display: block;
+    margin-top: 3px;
 }
