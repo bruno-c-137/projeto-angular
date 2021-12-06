@@ -1,3 +1,47 @@
 .bg-content {
   background: #484848;
+  border-radius: 10px;
+  @screen md{
+    border-radius: 0;
+  }
+}
+.hamburguer {
+  width: 40px;
+  border-top: 4px solid;
+  display: block;
+  color: rgba(19, 81, 180, 1);
+}
+
+.hamburguer::after,
+.hamburguer::before {
+  border: 1.9px solid;
+  width: 40px;
+  background: currentColor;
+  content: "";
+  display: block;
+  margin-top: 5px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.ativado {
+  .hamburguer {
+    border-top-color: transparent;
+  }
+
+
+}
+
+.ativado {
+  .hamburguer::before {
+    transform: rotate(135deg);
+  }
+}
+
+.ativado {
+  .hamburguer::after {
+    transform: rotate(-135deg);
+    top: -8px;
+    margin-top: 5px;
+  }
 }

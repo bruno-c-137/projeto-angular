@@ -4,12 +4,22 @@
   border-radius: 10px;
 
   .box-title {
+    font-size: 12px;
+
+    @screen md {
+      font-size: 14px;
+    }
+
     color: #C3C3CB;
   }
 
   .box-number {
     color: #282A34;
-    font-size: 35px;
+
+    @screen md {
+      font-size: 35px;
+    }
+
   }
 }
 
@@ -17,14 +27,25 @@
   .box-grafico {
     background: #FFFFFF;
     border: 1px solid #e7e7e7;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 10px 10px;
+
+    @screen md {
+      border-radius: 10px 0px 0px 10px;
+
+    }
+
 
   }
 
   .box-main {
     border: 1px solid #e7e7e7;
     background: #FFFFFF;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 10px 10px 10px 10px;
+
+    @screen md {
+      border-radius: 0px 10px 10px 0px;
+    }
+
 
 
     .box-title {
