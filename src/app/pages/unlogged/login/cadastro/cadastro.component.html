@@ -12,10 +12,10 @@
                 <h2 class="title title-second">create account</h2>
 
                 <p class="description description-second">or use your email for registration:</p>
-                <form class="form">
+                <div class="form">
                     <label class="label-input" for="">
 
-                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Name" />
                     </label>
 
                     <label class="label-input" for="">
@@ -25,12 +25,12 @@
 
                     <label class="label-input" for="">
 
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" />
                     </label>
 
 
-                    <button class="btn btn-second">sign up</button>
-                </form>
+                    <button  class="btn btn-second">sign up</button>
+                </div>
             </div><!-- second column -->
         </div><!-- first content -->
         <div class="content second-content">
@@ -43,21 +43,21 @@
             <div class="second-column">
                 <h2 class="title title-second">sign in to developer</h2>
                 <p class="description description-second">or use your email account:</p>
-                <form class="form">
+                <div class="form">
 
                     <label class="label-input" for="">
 
-                        <input type="email" placeholder="Email">
+                        <input [(ngModel)]="requestLogin.login" type="text" placeholder="Name" />
                     </label>
 
                     <label class="label-input" for="">
 
-                        <input type="password" placeholder="Password">
+                        <input [(ngModel)]="requestLogin.password" type="password" placeholder="Password" />
                     </label>
 
                     <a class="password" href="#">forgot your password?</a>
-                    <button class="btn btn-second">sign in</button>
-                </form>
+                    <button (click)="doLogin()" class="btn btn-second">sign in</button>
+                </div>
             </div><!-- second column -->
         </div><!-- second-content -->
     </div>
