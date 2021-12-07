@@ -1,35 +1,159 @@
 <div class="flex flex-col h-full">
     <div class="flex-1">
-        <app-headerNav></app-headerNav>
+        <app-header-dashboard></app-header-dashboard>
     </div>
 
 
     <div class="flex-1">
 
         <div class="flex">
-            <div class="box-top text-center w-1/4 md:mr-5 mr-2 md:p-4 p-1">
+            <div class="cursor-pointer box-top text-center w-1/4 md:mr-5 mr-2 md:p-4 p-1" (click)="toogle = 0"
+                [ngClass]="{ 'box-top-ativo ': toogle == 0  }">
                 <p class="box-title">Uderesolved</p>
                 <p class="box-number">60</p>
             </div>
-            <div class="box-top text-center w-1/4 md:mr-5 mr-2 md:p-4 p-1">
-                <p class="box-title">Uderesolved</p>
-                <p class="box-number">60</p>
+            <div class="cursor-pointer box-top text-center w-1/4 md:mr-5 mr-2 md:p-4 p-1" (click)="toogle = 1"
+                [ngClass]="{ 'box-top-ativo ': toogle == 1  }">
+                <p class="box-title">Overdue</p>
+                <p class="box-number">16</p>
             </div>
-            <div class="box-top text-center w-1/4 md:mr-5 mr-2 md:p-4 p-1">
-                <p class="box-title">Uderesolved</p>
-                <p class="box-number">60</p>
+            <div class="cursor-pointer box-top text-center w-1/4 md:mr-5 mr-2 md:p-4 p-1" (click)="toogle = 2"
+                [ngClass]="{ 'box-top-ativo ': toogle == 2  }">
+                <p class="box-title">Open</p>
+                <p class="box-number">43</p>
             </div>
-            <div class="box-top text-center w-1/4 md:p-4 p-1">
-                <p class="box-title">Uderesolved</p>
-                <p class="box-number">60</p>
+            <div class="cursor-pointer box-top text-center w-1/4 md:p-4 p-1" (click)="toogle = 3"
+                [ngClass]="{ 'box-top-ativo ': toogle == 3  }">
+                <p class="box-title">On hold</p>
+                <p class="box-number">64</p>
             </div>
         </div>
 
 
     </div>
-    <div class="main md:flex mt-10 flex-1 mb-7">
+    <div [ngClass]="{ '  main md:flex mt-10  flex-1 mb-7 ': toogle == 0, 'hidden' : toogle !==0  }">
         <div class="box-grafico md:w-3/4">
-            <canvas #meuCanvas></canvas>
+            <app-grafico [data1]="[60, 5, 2, 10, 15, 20, 30, 40, 50, 20,10, 15, 20, 30, 40, 50]"
+                [data2]="[ 15, 20, 30, 40, 50, 60, 2, 10, 15, 20, 30, 40, 50, 60, 5, 2]">
+
+            </app-grafico>
+
+        </div>
+        <div class="md:w-1/4 text-center">
+            <div class="box-main p-5">
+                <p class="box-title">Resolved</p>
+                <p class="box-number">449</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Received</p>
+                <p class="box-number">426</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Average first response time</p>
+                <p class="box-number">33m</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Average response time</p>
+                <p class="box-number">3h 8m</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Resolution within SLA</p>
+                <p class="box-number">94%</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div [ngClass]="{ '  main md:flex mt-10   flex-1 mb-7 ': toogle == 1, 'hidden' : toogle !== 1  }">
+        <div class="box-grafico md:w-3/4">
+            <app-grafico [data1]="[10, 15, 20, 30, 40, 50, 60, 5, 2, 10, 15, 20, 30, 40, 50, 20]"
+                [data2]="[20, 30, 40, 50, 60, 5, 2, 15, 20, 30, 40, 50, 60, 2, 10, 15]">
+
+            </app-grafico>
+
+        </div>
+        <div class="md:w-1/4 text-center">
+            <div class="box-main p-5">
+                <p class="box-title">Uderesolved</p>
+                <p class="box-number">60</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Uderesolved</p>
+                <p class="box-number">60</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Uderesolved</p>
+                <p class="box-number">60</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Uderesolved</p>
+                <p class="box-number">60</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Uderesolved</p>
+                <p class="box-number">60</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div [ngClass]="{ '  main md:flex mt-10 flex-1 mb-7 ': toogle == 2,  'hidden' : toogle !==2  }">
+        <div class="box-grafico md:w-3/4">
+            <app-grafico [data1]="[14, 13, 23, 32, 46, 53, 67, 9, 7, 14, 15, 20, 30, 40, 50, 20]"
+                [data2]="[21, 39, 46, 40, 60, 8, 26, 14, 26, 33, 20, 40, 50, 2, 10, 15]">
+
+            </app-grafico>
+
+        </div>
+        <div class="md:w-1/4 text-center">
+            <div class="box-main p-5">
+                <p class="box-title">Uderesolved</p>
+                <p class="box-number">60</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Uderesolved</p>
+                <p class="box-number">60</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Uderesolved</p>
+                <p class="box-number">60</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Uderesolved</p>
+                <p class="box-number">60</p>
+
+            </div>
+            <div class="box-main p-5">
+                <p class="box-title">Uderesolved</p>
+                <p class="box-number">60</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div [ngClass]="{ '  main md:flex mt-10  flex-1 mb-7 ': toogle == 3, 'hidden' : toogle !==3  }">
+        <div class="box-grafico md:w-3/4">
+            <app-grafico [data1]="[20, 30, 40, 50, 20,10, 15, 20, 30, 40, 50, 60, 5, 2, 10, 15, ]"
+                [data2]="[5, 2, 15, 20, 30,20, 30, 40, 50, 60, 40, 50, 60, 2, 10, 15]">
+
+            </app-grafico>
 
         </div>
         <div class="md:w-1/4 text-center">
