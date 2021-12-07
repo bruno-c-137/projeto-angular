@@ -1,6 +1,42 @@
 .img-destaque {
+  background-image: url('../../../../../assets/img/img-destaque-mb_02.png');
+
   @screen md {
     background-image: url('../../../../../assets/img/img-destaque.jpg');
+
+  }
+}
+
+.login-container {
+  a {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+    align-items: center;
+    transition: 1s ease-in;
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 52px;
+      color: #B2B2B2;
+      margin-left: 5px;
+    }
   }
 
+  span {
+    width: 0px;
+    border-bottom: 3px solid black;
+    transition: ease;
+    transition-duration: .5s;
+    display: block;
+    margin-top: -15px;
+  }
+}
+
+.login-container:hover {
+  span {
+    width: 100%;
+    transition: ease;
+    transition-duration: .5s;
+  }
 }
