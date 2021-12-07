@@ -45,7 +45,7 @@ export class CadastroComponent implements OnInit {
   public doRegistro(): void {
     console.log(this.requestRegistro);
     this.registroService.doRegistro(this.requestRegistro).subscribe((data) => {
-      this.alertService.info('cadastro efetuado'),
+      this.alertService.info('cadastro efetuado com sucesso'),
       this.router.navigate(['dashboard'])
 
     },
