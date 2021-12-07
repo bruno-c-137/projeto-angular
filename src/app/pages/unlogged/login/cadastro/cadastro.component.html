@@ -15,21 +15,21 @@
                 <div class="form">
                     <label class="label-input" for="">
 
-                        <input type="text" placeholder="Name" />
+                        <input [(ngModel)]="requestRegistro.name" type="text" placeholder="Name" />
                     </label>
 
                     <label class="label-input" for="">
 
-                        <input type="email" placeholder="Email">
+                        <input [(ngModel)]="requestRegistro.login" type="email" placeholder="Email">
                     </label>
 
                     <label class="label-input" for="">
 
-                        <input type="password" placeholder="Password" />
+                        <input [(ngModel)]="requestRegistro.password" type="password" placeholder="Password" />
                     </label>
 
 
-                    <button  class="btn btn-second">sign up</button>
+                    <button (click)="doRegistro()" class="btn btn-second">sign up</button>
                 </div>
             </div><!-- second column -->
         </div><!-- first content -->

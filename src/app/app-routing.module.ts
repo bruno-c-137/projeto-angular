@@ -2,13 +2,15 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from './resources/services/auth-guard.service';
 import { HomeComponent } from './pages/unlogged/sites/home/home.component';
+import { SitesModule } from './pages/unlogged/sites/sites.module';
 
 // ng generate module customers --route customers --module app.module
 const routes: Routes = [
-  
-  
+
+
   {
-    path: '', component: HomeComponent,
+    path: '',
+    loadChildren: () => import('./pages/unlogged/sites/sites.module').then(m => m.SitesModule)
 
   },
   {
@@ -17,12 +19,10 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    canActivate: [AuthGuardService],
     loadChildren: () => import('./pages/logged/logged.module').then(m => m.LoggedModule),
-    
+    canActivate: [AuthGuardService],
   },
- 
-  // { path: '**', redirectTo: 'login ' },
+  
 
 
 
